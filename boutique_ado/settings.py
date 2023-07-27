@@ -25,7 +25,11 @@ SECRET_KEY = 'p@ei#69*b*zz3u4yie-$()@cy^l(+x9&@6ypx+r0lm(3%_9hr7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8001-pzompa-boutique-ado-v1-43xt2kvlpx.us2.codeanyapp.com']
+ALLOWED_HOSTS = [
+    '8001-pzompa-boutique-ado-v1-43xt2kvlpx.us2.codeanyapp.com',
+    '8000-pzompa-boutique-ado-v1-43xt2kvlpx.us2.codeanyapp.com',
+    'pzompa-boutique-ado-v1-43xt2kvlpx.us2.codeanyapp.com',
+]
 
 
 # Application definition
@@ -150,4 +154,4 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
