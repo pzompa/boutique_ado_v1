@@ -25,7 +25,7 @@ SECRET_KEY = 'p@ei#69*b*zz3u4yie-$()@cy^l(+x9&@6ypx+r0lm(3%_9hr7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-pzompa-boutique-ado-v1-s9qokumpr2.us2.codeanyapp.com']
+ALLOWED_HOSTS = ['8001-pzompa-boutique-ado-v1-43xt2kvlpx.us2.codeanyapp.com']
 
 
 # Application definition
