@@ -29,6 +29,7 @@ ALLOWED_HOSTS = [
     '8001-pzompa-boutique-ado-v1-43xt2kvlpx.us2.codeanyapp.com',
     '8000-pzompa-boutique-ado-v1-43xt2kvlpx.us2.codeanyapp.com',
     'pzompa-boutique-ado-v1-43xt2kvlpx.us2.codeanyapp.com',
+    '8000-pzompa-boutique-ado-v1-wgvyc11jac.us2.codeanyapp.com',
 ]
 
 
