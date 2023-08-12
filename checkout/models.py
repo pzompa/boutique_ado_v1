@@ -36,7 +36,8 @@ class Order(models.Model):
 
     def update_total(self):
         """
-        Update grand total each time a line item is added, accounting for delivery costs.
+        Update grand total each time a line item is added, accounting for 
+        delivery costs.
 
         """
         self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))[
@@ -51,7 +52,8 @@ class Order(models.Model):
 
     def save(self, *args, **kwargs):
         """
-        Override the original save method to set the order number if it hasn't been set already.
+        Override the original save method to set the order number if 
+        it hasn't been set already.
 
         """
         if not self.order_number:
@@ -63,18 +65,21 @@ class Order(models.Model):
 
 
 class OrderLineItem(models.Model):
-    order = models.ForeignKey(Order, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems')
+    order = models.ForeignKey(Order, null=False, blank=False,
+            on_delete=models.CASCADE, related_name='lineitems')
     product = models.ForeignKey(
         Product, null=False, blank=False, on_delete=models.CASCADE)
     product_size = models.CharField(
         max_length=2, null=True, blank=True)  # XS, S, M, L, XL
     quantity = models.IntegerField(null=False, blank=False, default=0)
     lineitem_total = models.DecimalField(
-        max_digits=6, decimal_places=2, null=False, blank=False, editable=False)
+        max_digits=6, decimal_places=2, null=False, blank=False,
+        editable=False)
 
     def save(self, *args, **kwargs):
         """
-        Override the origninal save method to set the lineitem total and update the order total.
+        Override the origninal save method to set the lineitem 
+        total and update the order total.
 
         """
         self.lineitems_total = self.product.price * self.quantity
