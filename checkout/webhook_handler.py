@@ -1,5 +1,6 @@
 from django.http import HttpResponse
-from .models import Order, OrderLineItem
+from .models import Order
+from .models import OrderLineItem
 
 from products.models import Product
 
