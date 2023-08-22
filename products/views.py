@@ -129,7 +129,7 @@ def edit_product(request, product_id):
 @login_required
 def delete_product(request, product_id):
     """Delete product from the store"""
-     if not request.user.is_superuser:
+    if not request.user.is_superuser:
         messages.error(request, 'Sorry, only storeowner can do that.')
         return redirect(reverse('home'))
         
