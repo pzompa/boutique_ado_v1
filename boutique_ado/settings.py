@@ -28,7 +28,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     '8000-pzompa-boutiqueadov1-kwm23zs4063.ws-eu104.gitpod.io',
-    'boutiqueado.herokuapp.com', 'localhost',
+    'boutiqueadoproject.herokuapp.com', 
+    'localhost',
+    'boutiqueadoproject-dd9b0c1ef00b.herokuapp.com',
 ]
 
 
